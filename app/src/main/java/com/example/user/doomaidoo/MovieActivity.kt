@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_movie.*
 
 class MovieActivity : AppCompatActivity() {
 
@@ -29,6 +30,9 @@ class MovieActivity : AppCompatActivity() {
         tvCatagories!!.text = catagories
         img!!.setImageResource(image)
 
-
+         reviewbutton.setOnClickListener({
+             val intent = Intent(this, ReviewActivity::class.java);
+             startActivity(intent)
+         })
     }
 }
