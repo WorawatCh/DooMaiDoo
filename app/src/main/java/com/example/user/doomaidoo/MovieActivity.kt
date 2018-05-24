@@ -4,9 +4,14 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_movie.*
+import kotlinx.android.synthetic.*
+import android.content.DialogInterface
+import android.provider.MediaStore
+import android.support.v7.app.AlertDialog
+import android.widget.*
+import kotlinx.android.synthetic.main.activity_catagories.*
+
 
 class MovieActivity : AppCompatActivity() {
 
@@ -17,7 +22,7 @@ class MovieActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie)
 
-        tvTitle = findViewById<View>(R.id.textview_id) as TextView?
+        tvTitle = findViewById<View>(R.id.textview_name) as TextView?
         tvCatagories = findViewById<View>(R.id.txt_cat) as TextView?
         img = findViewById<View>(R.id.movieTHumbnail) as ImageView?
 
@@ -30,9 +35,27 @@ class MovieActivity : AppCompatActivity() {
         tvCatagories!!.text = catagories
         img!!.setImageResource(image)
 
-         reviewbutton.setOnClickListener({
-             val intent = Intent(this, ReviewActivity::class.java);
-             startActivity(intent)
-         })
+        reviewbutton.setOnClickListener({
+              when(catagories){
+                 "Animation" -> alert()
+                  "Drama" -> alert()
+                  "Sci-fi" -> alert()
+                  "Horror" -> alert()
+                  else -> {
+                      val intent1 = Intent(this, ReviewActivity::class.java)
+                      startActivity(intent1)
+                      finish()
+                  }
+              }
+     })
+}
+     fun alert(){
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("You are not allow to review this movie")
+        builder.setPositiveButton("Go back", DialogInterface.OnClickListener { dialog, id ->
+        })
+        builder.show()
     }
 }
+
+

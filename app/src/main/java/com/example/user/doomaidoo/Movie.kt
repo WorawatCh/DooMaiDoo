@@ -6,23 +6,12 @@ package com.example.user.doomaidoo
 
 class Movie {
     var name: String? = null
-        get()=field
-      set(value) {
-          field=value
-      }
 
     var catagories: String? = null
-        get() = field
-        set(value) {
-            field = value
-        }
 
     var thumbnail: Int? = null
-        get() = field
-    set(value){
-        field=value
-    }
-    constructor() {}
+
+    constructor()
 
     constructor(name: String, catagories: String, thumbnail : Int) {
         this.name = name

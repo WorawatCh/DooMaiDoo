@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.Toast
+import com.example.user.doomaidoo.R.id.action
+import com.example.user.doomaidoo.R.id.start
 import kotlinx.android.synthetic.main.activity_catagories.*
 
 class catagoriesActivity : AppCompatActivity() {
@@ -16,25 +18,25 @@ class catagoriesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_catagories)
         var allButton = ArrayList<RadioButton>()
         var toPrint = ArrayList<String>()
-        allButton.add(actionButton)
-        allButton.add(adventureButton)
-        allButton.add(animationButton)
-        allButton.add(comedyButton)
-        allButton.add(dramaButton)
-        allButton.add(fantasyButton)
-        allButton.add(horrorButton)
-        allButton.add(scifiButton)
-        allButton.add(superheroButton)
-        allButton.add(warButton)
-        var selected = allButton.filter { it.isChecked }
-        for (p in selected) toPrint.add(p.id.toString())
-//        val allCatagories = listOf(actionButton,adventureButton,animationButton,comedyButton,dramaButton,fantasyButton,horrorButton,scifiButton,superheroButton,warButton)
-//        val checked = allCatagories.filter { it.isChecked }
-
+        allButton.add(action)
+        allButton.add(adventure)
+        allButton.add(animation)
+        allButton.add(comedy)
+        allButton.add(drama)
+        allButton.add(fantasy)
+        allButton.add(horror)
+        allButton.add(scifi)
+        allButton.add(superhero)
+        allButton.add(war)
+        for(p in allButton){
+            if(p.isChecked){
+                toPrint.add(p.toString())
+            }
+        }
 
         nextbutton.setOnClickListener({
-            Toast.makeText(this, toPrint.toString() ,Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, home::class.java);
+            val intent = Intent(this, home::class.java)
+            intent.putExtra("List",toPrint)
             startActivity(intent)
         })
     }

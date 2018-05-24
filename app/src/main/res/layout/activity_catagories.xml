@@ -7,7 +7,7 @@
     tools:context="com.example.user.doomaidoo.catagoriesActivity">
 
     <RadioButton
-        android:id="@+id/actionButton"
+        android:id="@+id/action"
         android:layout_width="99dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -17,47 +17,47 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioButton
-        android:id="@+id/adventureButton"
+        android:id="@+id/adventure"
         android:layout_width="99dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="48dp"
         android:text="Adventure"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actionButton" />
+        app:layout_constraintTop_toBottomOf="@+id/action" />
 
     <RadioButton
-        android:id="@+id/animationButton"
+        android:id="@+id/animation"
         android:layout_width="99dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="48dp"
         android:text="Animation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adventureButton" />
+        app:layout_constraintTop_toBottomOf="@+id/adventure" />
 
     <RadioButton
-        android:id="@+id/comedyButton"
+        android:id="@+id/comedy"
         android:layout_width="98dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="48dp"
         android:text="Comedy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animationButton" />
+        app:layout_constraintTop_toBottomOf="@+id/animation" />
 
     <RadioButton
-        android:id="@+id/dramaButton"
+        android:id="@+id/drama"
         android:layout_width="98dp"
         android:layout_height="34dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="48dp"
         android:text="Drama"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comedyButton" />
+        app:layout_constraintTop_toBottomOf="@+id/comedy" />
 
     <RadioButton
-        android:id="@+id/fantasyButton"
+        android:id="@+id/fantasy"
         android:layout_width="98dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -66,11 +66,11 @@
         android:text="Fantasy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toEndOf="@+id/actionButton"
+        app:layout_constraintStart_toEndOf="@+id/action"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioButton
-        android:id="@+id/horrorButton"
+        android:id="@+id/horror"
         android:layout_width="98dp"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
@@ -79,11 +79,11 @@
         android:text="Horror"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toEndOf="@+id/adventureButton"
-        app:layout_constraintTop_toBottomOf="@+id/fantasyButton" />
+        app:layout_constraintStart_toEndOf="@+id/adventure"
+        app:layout_constraintTop_toBottomOf="@+id/fantasy" />
 
     <RadioButton
-        android:id="@+id/scifiButton"
+        android:id="@+id/scifi"
         android:layout_width="99dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -92,11 +92,11 @@
         android:text="Sci-fi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toEndOf="@+id/animationButton"
-        app:layout_constraintTop_toBottomOf="@+id/horrorButton" />
+        app:layout_constraintStart_toEndOf="@+id/animation"
+        app:layout_constraintTop_toBottomOf="@+id/horror" />
 
     <RadioButton
-        android:id="@+id/superheroButton"
+        android:id="@+id/superhero"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -105,11 +105,11 @@
         android:text="Superhero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toEndOf="@+id/comedyButton"
-        app:layout_constraintTop_toBottomOf="@+id/scifiButton" />
+        app:layout_constraintStart_toEndOf="@+id/comedy"
+        app:layout_constraintTop_toBottomOf="@+id/scifi" />
 
     <RadioButton
-        android:id="@+id/warButton"
+        android:id="@+id/war"
         android:layout_width="97dp"
         android:layout_height="35dp"
         android:layout_marginEnd="8dp"
@@ -118,8 +118,8 @@
         android:text="War"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toEndOf="@+id/dramaButton"
-        app:layout_constraintTop_toBottomOf="@+id/superheroButton" />
+        app:layout_constraintStart_toEndOf="@+id/drama"
+        app:layout_constraintTop_toBottomOf="@+id/superhero" />
 
     <Button
         android:id="@+id/nextbutton"

@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         enterUserName.setOnClickListener({
-            val intent = Intent(this, catagoriesActivity::class.java);
+            val intent = Intent(this, catagoriesActivity::class.java)
             startActivity(intent)
         })
     }
